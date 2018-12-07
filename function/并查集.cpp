@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+int pre[1010]; 
 int find(int x) {
   int r = x;
   while (r != pre[r]) {
