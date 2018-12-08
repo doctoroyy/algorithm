@@ -19,7 +19,7 @@ vector<string> split(string str, string regx) {
 }
 map<string, int> dic;
 
-long long  hex2ten(vector<string> arr) {
+long long hex2ten(vector<string> arr) {
   long long  res = 0;
   for (int i = 0; i < arr.size(); i++) {
     res = res * 16 + dic[arr[i]];
