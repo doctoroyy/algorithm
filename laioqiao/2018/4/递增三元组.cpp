@@ -25,6 +25,9 @@ int main() {
     for (int i = 0; i < n; i++) cin >> a[i];
     for (int i = 0; i < n; i++) cin >> b[i];
     for (int i = 0; i < n; i++) cin >> c[i];
+    sort(a, a + n);
+    sort(b, b + n);
+    sort(c, c + n);
     int sum = 0;
     for (int i = 0; i < n; i++) {
       int bstart = binarySearch(b, n, a[i]);
