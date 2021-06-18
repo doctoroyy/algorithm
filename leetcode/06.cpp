@@ -9,9 +9,9 @@ using namespace std;
 string convert(string s, int numRows) {
   if (numRows == 1) return s;
   
-  int dir[2][2] = {{1, 0}, {-1, 1}};
+  int dir[2] = {1, -1};
   int d = 0;
-  int row = 0, col = 0;
+  int row = 0;
 
   string res = "";
 
@@ -19,8 +19,7 @@ string convert(string s, int numRows) {
 
   for (int i = 0; i < s.size(); i++) {
     buff[row] += s[i];
-    row += dir[d][0];
-    col += dir[d][1];
+    row += dir[d];
     if (row == numRows - 1 || row == 0) d = !d; 
   }
 
