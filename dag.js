@@ -130,12 +130,14 @@
 const n = 6, m = 7;
 const edges = [[1, 2], [2, 3], [3, 1], [1, 4], [4, 6], [6, 5], [5, 4]];
 
+// const n = 10, m = 20;
+// const edges = [[9,8], [2,9],[7,5], [4,5],[1,5],[3,8],[4,2],[5,4],[6,5],[3,6],[8,10],[10,9],[10,7],[9,3],[7,6],[8,7],[7,3],[8,9],[7,10],[2,1]]
 const pre = Array(n + 1).fill(-1);
 
 const color = Array(n + 1).fill(0);
 
 // 建立邻接表
-const adj = [[], [], [], [], [], [], [], [], []];
+const adj = [[], [], [], [], [], [], [], [], [], [], []];
 edges.forEach(edge => {
   const [source, target] = edge;
   adj[source].push(target);
