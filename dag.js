@@ -199,8 +199,8 @@ const buildCycle = (start, end) => {
 const dfs = source => {
   color[source] = 1;
   adj[source].forEach(target => {
-    pre[target] = source;
     if (color[target] === 0) {
+      pre[target] = source;
       dfs(target);
     } else if (color[target] === 1) {
       // console.log(target, source)
